@@ -1,0 +1,57 @@
+:root{
+  --bg:#ffffff; --panel:#ffffff; --panel-2:#f6f6f4; --border:#e6e4df;
+  --text:#1a1a1a; --muted:#7a756d; --accent:#1a1a1a; --accent-soft:#1a1a1a;
+  --good:#1f7a3a; --bad:#a3262a; --shadow:0 1px 2px rgba(0,0,0,.04), 0 8px 24px -16px rgba(0,0,0,.12);
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:15px;-webkit-font-smoothing:antialiased}
+.container{max-width:1080px;margin:0 auto;padding:32px 24px 64px}
+.brand{font-family:var(--serif);font-weight:500;letter-spacing:.02em}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:.01em;margin:0 0 12px;color:var(--text)}
+h1{font-size:34px}
+h3{font-size:20px}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.muted{color:var(--muted);font-size:13px}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:24px;box-shadow:var(--shadow)}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.row > *{flex:1;min-width:180px}
+input,select,button,textarea{
+  width:100%;padding:11px 13px;border-radius:4px;border:1px solid var(--border);
+  background:#fff;color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:border-color .15s
+}
+input:focus,select:focus,textarea:focus{border-color:var(--text)}
+button{cursor:pointer;background:var(--text);color:#fff;border:1px solid var(--text);font-weight:500;letter-spacing:.04em}
+button:hover{opacity:.88}
+button.ghost{background:transparent;color:var(--text)}
+button.danger{background:#fff;border-color:var(--bad);color:var(--bad)}
+button.danger:hover{background:var(--bad);color:#fff;opacity:1}
+label{font-size:11px;color:var(--muted);display:block;margin-bottom:6px;letter-spacing:.12em;text-transform:uppercase}
+.gate{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--panel-2)}
+.gate .card{max-width:440px;width:100%;padding:36px}
+.gate h1{font-size:30px;margin-bottom:4px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:20px 0}
+.kpi{background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:18px}
+.kpi span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.kpi b{font-family:var(--serif);font-size:26px;font-weight:500;display:block;margin-top:6px}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th,td{padding:11px 10px;border-bottom:1px solid var(--border);text-align:left;font-size:14px}
+th{color:var(--muted);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+.badge{padding:2px 9px;border-radius:999px;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.08em;border:1px solid}
+.badge.in{color:var(--good);border-color:var(--good)}
+.badge.out{color:var(--bad);border-color:var(--bad)}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:10px;flex-wrap:wrap;padding-bottom:18px;border-bottom:1px solid var(--border)}
+.pill{background:var(--panel-2);border:1px solid var(--border);padding:6px 12px;border-radius:999px;font-size:12px;color:var(--muted);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.err{color:var(--bad);font-size:13px;margin-top:10px}
+.ok{color:var(--good);font-size:13px;margin-top:10px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:8px}
+.menu-item{border:1px solid var(--border);border-radius:4px;padding:10px 12px;background:#fff;cursor:pointer;text-align:left;font-size:13px;transition:all .15s;display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--text)}
+.menu-item:hover{border-color:var(--text);background:var(--panel-2)}
+.menu-item .nm{font-weight:500}
+.menu-item .pr{font-family:var(--serif);font-size:15px}
+.menu-cat{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+details > summary{cursor:pointer;color:var(--muted);font-size:13px;letter-spacing:.06em}
+details > summary:hover{color:var(--text)}
+hr.div{border:0;border-top:1px solid var(--border);margin:18px 0}
+@media (max-width:640px){.kpis{grid-template-columns:1fr}.gate .card{padding:24px}}
